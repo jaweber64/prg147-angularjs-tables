@@ -1,0 +1,69 @@
+body {
+    background-image: url("misc069.jpg");
+    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+.container {
+    max-width: 1060px;
+    margin: 10px auto;
+    border-style: solid;
+    border-width: 8px;
+    border-color: midnightblue;
+    background-color: #d1dffa;
+}
+
+
+h1{ font-family: inherit;
+    font-size: 2em;
+    color:midnightblue;
+    text-align: center;
+}
+table {
+    font-family: inherit;
+    font-size: 0.65em;
+    color: midnightblue;
+    background-color: #d1dffa;
+    width: 85%;
+    margin: 2em auto;
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: firebrick;
+    border-width: 4px;
+    border-radius: 25px;
+}
+table caption {
+    margin: 50px 100px 15px;
+    border-style: solid;
+    border-color: midnightblue;
+    border-width: 8px;
+    border-radius: 15px;
+    background-color: #d1dffa;
+    font-family: inherit;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: midnightblue;
+    text-shadow: 4px 4px 4px white;
+}
+th {
+    border-style: solid;
+    border-width: 4px;
+    border-color: firebrick;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+    background-color: peachpuff;
+}
+td {
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightseagreen;
+    padding: 3px;
+    text-align: left;
+    font-weight: bold;
+}
+
+footer {font-size: .5em;}
+.left-footer {text-align: left;}
+.right-footer {text-align: right;}

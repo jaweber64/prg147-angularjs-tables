@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="tables.css">
+    <title>Angular JS - Tables</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div ng-app="tablesApp" ng-controller="dataCtrl">
+    <header class="container w3-panel w3-round-xlarge">
+        <h1>Angular JS - Tables</h1>
+    </header>
+
+    <table>
+        <caption>Weber Cousins College Info <br>
+        by Birth Date</caption>
+        <tr><th>Family</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>School/College</th>
+            <th>Major</th>
+            <th>Grad. Date</th>
+        </tr>
+        <tr ng-repeat="x in members | orderBy: sortDate">
+            <td>{{ x.lastname }}</td>
+            <td>{{ x.firstname }}</td>
+            <td>{{ x.bdate | date:"shortDate" }}</td>
+            <td>{{ x.school }}</td>
+            <td>{{ x.major }}</td>
+            <td>{{ x.graddate}}</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>Weber Cousins College Info <br>
+            by Family</caption>
+        <tr><th>Family</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>School/College</th>
+            <th>Major</th>
+            <th>Grad. Date</th>
+        </tr>
+        <tr ng-repeat="x in members | orderBy: lastname">
+            <td>{{ x.lastname }}</td>
+            <td>{{ x.firstname }}</td>
+            <td>{{ x.bdate | date:"shortDate" }}</td>
+            <td>{{ x.school }}</td>
+            <td>{{ x.major }}</td>
+            <td>{{ x.graddate}}</td>
+        </tr>
+    </table>
+
+</div>
+<footer class="container w3-panel w3-round-xlarge">
+    <div class="w3-row w3-round-xlarge">
+        <div class="w3-half left-footer">
+            <p>&copy Janet Weber <br>
+                Images Courtesy of <a href="https://pixabay.com/">Pixabay</a></p>
+        </div>
+        <div class="w3-half right-footer">
+            <p>PRG-147 Fall 2016 <br>
+                angularJS - Tables</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Modules -->
+<script src="js/app.js"></script>
+
+<!-- Controllers -->
+<script src="js/controllers/datacontroller.js"></script>
+
+<!-- Services -->
+<!--script src="js/services/schoolinfo.js"></script-->
+
+</body>
+
+</html>
